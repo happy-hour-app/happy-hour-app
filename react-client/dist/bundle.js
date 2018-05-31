@@ -349,27 +349,14 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 
 /***/ }),
 
-/***/ "./react-client/src/components/happyHourEntry.jsx":
-/*!********************************************************!*\
-  !*** ./react-client/src/components/happyHourEntry.jsx ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar happyHourEntry = function happyHourEntry(props) {\n    return _react2.default.createElement(\n        'div',\n        null,\n        props.item.description\n    );\n};\n\nexports.default = happyHourEntry;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZWFjdC1jbGllbnQvc3JjL2NvbXBvbmVudHMvaGFwcHlIb3VyRW50cnkuanN4LmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vL3JlYWN0LWNsaWVudC9zcmMvY29tcG9uZW50cy9oYXBweUhvdXJFbnRyeS5qc3g/Y2QzYSJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnO1xuXG5jb25zdCBoYXBweUhvdXJFbnRyeSA9IChwcm9wcykgPT4gKFxuICAgIDxkaXY+XG4gICAgICAgIHtwcm9wcy5pdGVtLmRlc2NyaXB0aW9ufVxuICAgIDwvZGl2PlxuKVxuXG5leHBvcnQgZGVmYXVsdCBoYXBweUhvdXJFbnRyeTsiXSwibWFwcGluZ3MiOiI7Ozs7OztBQUFBO0FBQ0E7Ozs7O0FBQ0E7QUFBQTtBQUNBO0FBQUE7QUFDQTtBQURBO0FBREE7QUFDQTtBQUtBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./react-client/src/components/happyHourEntry.jsx\n");
-
-/***/ }),
-
 /***/ "./react-client/src/components/happyHourList.jsx":
 /*!*******************************************************!*\
   !*** ./react-client/src/components/happyHourList.jsx ***!
   \*******************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _happyHourEntry = __webpack_require__(/*! ./happyHourEntry.jsx */ \"./react-client/src/components/happyHourEntry.jsx\");\n\nvar _happyHourEntry2 = _interopRequireDefault(_happyHourEntry);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar happyHourList = function happyHourList(props) {\n    return _react2.default.createElement(\n        'div',\n        null,\n        _react2.default.createElement(\n            'h4',\n            null,\n            ' happy Hour List '\n        ),\n        'There are ',\n        props.items.length,\n        ' Happy Hours Nearby!',\n        props.items.map(function (item) {\n            return _react2.default.createElement(_happyHourEntry2.default, { item: item });\n        })\n    );\n};\n\nexports.default = happyHourList;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZWFjdC1jbGllbnQvc3JjL2NvbXBvbmVudHMvaGFwcHlIb3VyTGlzdC5qc3guanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vcmVhY3QtY2xpZW50L3NyYy9jb21wb25lbnRzL2hhcHB5SG91ckxpc3QuanN4PzFlMDkiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCBIYXBweUhvdXJFbnRyeSBmcm9tICcuL2hhcHB5SG91ckVudHJ5LmpzeCc7XG5cbmNvbnN0IGhhcHB5SG91ckxpc3QgPSAocHJvcHMpID0+IChcbiAgICA8ZGl2PlxuICAgICAgICA8aDQ+IGhhcHB5IEhvdXIgTGlzdCA8L2g0PlxuICAgICAgICBUaGVyZSBhcmUge3Byb3BzLml0ZW1zLmxlbmd0aH0gSGFwcHkgSG91cnMgTmVhcmJ5IVxuICAgIHtwcm9wcy5pdGVtcy5tYXAoaXRlbSA9PiA8SGFwcHlIb3VyRW50cnkgaXRlbT17aXRlbX0gLz4pfVxuICAgIDwvZGl2PlxuKVxuXG5leHBvcnQgZGVmYXVsdCBoYXBweUhvdXJMaXN0OyJdLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQUE7QUFDQTs7O0FBQUE7QUFDQTs7Ozs7QUFDQTtBQUFBO0FBQ0E7QUFBQTtBQUNBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFEQTtBQUVBO0FBRkE7QUFHQTtBQUFBO0FBQUE7QUFIQTtBQURBO0FBQ0E7QUFPQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./react-client/src/components/happyHourList.jsx\n");
+eval("throw new Error(\"Module build failed: SyntaxError: Unexpected token (2:1)\\n\\n\\u001b[0m \\u001b[90m 1 | \\u001b[39m\\u001b[36mimport\\u001b[39m \\u001b[33mReact\\u001b[39m from \\u001b[32m'react'\\u001b[39m\\u001b[33m;\\u001b[39m\\n\\u001b[31m\\u001b[1m>\\u001b[22m\\u001b[39m\\u001b[90m 2 | \\u001b[39m\\u001b[33m<<\\u001b[39m\\u001b[33m<<\\u001b[39m\\u001b[33m<<\\u001b[39m\\u001b[33m<\\u001b[39m \\u001b[33mHEAD\\u001b[39m\\n \\u001b[90m   | \\u001b[39m \\u001b[31m\\u001b[1m^\\u001b[22m\\u001b[39m\\n \\u001b[90m 3 | \\u001b[39m\\u001b[36mimport\\u001b[39m \\u001b[33mHappyHourEntry\\u001b[39m from \\u001b[32m'./happyHourEntry.jsx'\\u001b[39m\\u001b[33m;\\u001b[39m\\n \\u001b[90m 4 | \\u001b[39m\\u001b[33m===\\u001b[39m\\u001b[33m===\\u001b[39m\\u001b[33m=\\u001b[39m\\n \\u001b[90m 5 | \\u001b[39m\\u001b[36mimport\\u001b[39m happyHourEntry from \\u001b[32m'./happyHourEntry.jsx'\\u001b[39m\\u001b[33m;\\u001b[39m\\u001b[0m\\n\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZWFjdC1jbGllbnQvc3JjL2NvbXBvbmVudHMvaGFwcHlIb3VyTGlzdC5qc3guanMiLCJzb3VyY2VzIjpbXSwibWFwcGluZ3MiOiIiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./react-client/src/components/happyHourList.jsx\n");
 
 /***/ }),
 
