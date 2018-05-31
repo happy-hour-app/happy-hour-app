@@ -1,12 +1,12 @@
 # Project Name
 
-> Pithy project description
+> Happy Hour App
 
 ## Team
 
-  - __Product Owner__: teamMember
-  - __Scrum Master__: teamMember
-  - __Development Team Members__: teamMember, teamMember
+  - __Product Owner__: Senai
+  - __Scrum Master__: Jelani
+  - __Development Team Members__: Mark, Senai, Jelani
 
 ## Table of Contents
 
