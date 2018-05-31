@@ -7,7 +7,7 @@ const app = express();
 // handle requests here
 
 // need to use React 
-// app.use(express.static(__dirname + '/../react-client/dist'));
+app.use(express.static(__dirname + '/../react-client/dist'));
 
 app.get('/', (req, res) => {
     res.send('SERVER RUNNING, THIS THE ROOT');
