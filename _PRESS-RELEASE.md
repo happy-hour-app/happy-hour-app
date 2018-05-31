@@ -17,19 +17,18 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+  >  Happy Hour APP
 
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  > This is for everyone who wants to know where good happy hours are around them.
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
-
+  > For those who enjoy good food, quality drink and great atmosphere with out breaking the bank. We list user contributed and owner verified Happy Hours in your area.
 ## Problem ##
-  > Describe the problem your product solves.
+  > Lack of reliable and descriptive Happy Hour postings in the New Orleans Area.
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  > This App takes in user generato
 
 ## Quote from You ##
   > A quote from a spokesperson in your company.
