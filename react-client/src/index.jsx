@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import happyHourList from './components/happyHourList.jsx';
 
+console.log('IT WORKED');
+
 class App extends React.Component {
     constructor(props) {
         super(props);
