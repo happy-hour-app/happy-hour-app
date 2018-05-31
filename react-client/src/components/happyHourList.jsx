@@ -1,11 +1,11 @@
 import React from 'react';
-import happyHourEntry from './happyHourEntry';
+import HappyHourEntry from './happyHourEntry.jsx';
 
 const happyHourList = (props) => (
     <div>
-        <h4> happyHourList </h4>
+        <h4> happy Hour List </h4>
         There are {props.items.length} Happy Hours Nearby!
-    {props.items.map(item => <happyHourEntry item={item} />)}
+    {props.items.map(item => <HappyHourEntry item={item} />)}
     </div>
 )
 

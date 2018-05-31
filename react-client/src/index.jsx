@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
-import happyHourList from './components/happyHourList.jsx';
+import HappyHourList from './components/happyHourList.jsx';
 
 console.log('IT WORKED');
 
@@ -9,7 +9,7 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            items: []
+            items: [{description: 'Happy Hour 1'}]
         }
     }
 
@@ -32,7 +32,7 @@ class App extends React.Component {
     render() {
         return (<div>
             <h1>Happy Hour List</h1>
-            <happyHourList items={this.state.items} />
+            <HappyHourList items={this.state.items} />
         </div>)
     }
 }
