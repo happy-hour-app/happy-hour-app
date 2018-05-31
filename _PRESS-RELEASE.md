@@ -23,21 +23,21 @@ Once the project moves into development, the press release can be used as a touc
   > This is for everyone who wants to know where good happy hours are around them.
 
 ## Summary ##
-  > For those who enjoy good food, quality drink and great atmosphere with out breaking the bank. We list user contributed and owner verified Happy Hours in your area.
+  > For those who enjoy good food, quality drinks and great atmosphere with out breaking the bank. We list user contributed and owner verified Happy Hours in your area.
 ## Problem ##
-  > Lack of reliable and descriptive Happy Hour postings in the New Orleans Area.
+  > Lack of reliable and descriptive Happy Hour postings in the New Orleans Area. Online searches show you out of date, non existence, false happy hour menus.
 
 ## Solution ##
-  > This App takes in user generato
+  > This App shows you reliable happy hours in your area by having the Restaurants posting their own happy hour information. 
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
+  > Happy hours you can trust.
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+  > Go to homepage, allow for geo location, browse happy hours.
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  > Thanks to happy hour app I am no longer let down by false online happy hour information.
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+  > Thank you for your time, now go and visit our website!
