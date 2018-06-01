@@ -10,7 +10,7 @@ const app = express();
 app.use(express.static(__dirname + '/../react-client/dist'));
 
 app.get('/', (req, res) => {
-    res.send('SERVER RUNNING, THIS THE ROOT');
+    // res.send('SERVER RUNNING, THIS THE ROOT');
 });
 
 app.listen(PORT, () => {
