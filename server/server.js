@@ -1,4 +1,5 @@
 require('dotenv').config();
+const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 
@@ -8,10 +9,10 @@ const app = express();
 // handle requests here
 
 // need to use React 
-app.use(express.static(__dirname + '/../react-client/dist'));
+app.use(express.static(path.join(__dirname, '/../react-client/dist')));
 
 app.get('/', (req, res) => {
-
+  // res.end();
 });
 
 app.listen(process.env.PORT, () => {
