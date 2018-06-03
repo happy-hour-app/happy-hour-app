@@ -61,6 +61,9 @@ class App extends React.Component {
     console.log(this.state.username);
     console.log('PASSWORD');
     console.log(this.state.password);
+    axios.post('/login', { username: this.state.username, password: this.state.password })
+      .then((res) => { console.log(res.data); })
+      .catch(err => console.log(err));
     e.preventDefault();
   }
   typeUsername(event) {
@@ -84,7 +87,7 @@ class App extends React.Component {
               Password:
               <input type="text" name="password" value={this.state.password} onChange={this.typePassword} />
             </label>
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Login" />
           </form>
           <div>( LOGIN PAGE ALWAYS TRUE IN INDEX.JSX UNTIL SERVER HANDLES ACCOUNTS ) </div>
         </div>
