@@ -61,6 +61,9 @@ class App extends React.Component {
     console.log(this.state.username);
     console.log('PASSWORD');
     console.log(this.state.password);
+    axios.post('/login', { username: this.state.username, password: this.state.password })
+      .then((res) => { console.log(res.data); })
+      .catch(err => console.log(err));
     e.preventDefault();
   }
   typeUsername(event) {
