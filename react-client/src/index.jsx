@@ -10,6 +10,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      loginPage: true,
       location: 'loading..',
       date: 'loading..',
       items: [{ description: 'Happy Hour 1' }],
@@ -51,6 +52,25 @@ class App extends React.Component {
   }
 
   render() {
+    if (this.state.loginPage) {
+      return (
+        <div>
+          <h2> Happy Hour App</h2>
+          <form>
+            <label>
+              Username:
+              <input type="text" name="username" />
+            </label>
+            <label>
+              Password:
+              <input type="text" name="password" />
+            </label>
+            <input type="submit" value="Submit" />
+          </form>
+          <div>( LOGIN PAGE ALWAYS TRUE IN INDEX.JSX UNTIL SERVER HANDLES ACCOUNTS ) </div>
+        </div>
+      );
+    }
     return (
       <div>
         <HappyHourHeader location={this.state.location} date={this.state.date} />
