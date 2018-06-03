@@ -10,11 +10,16 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      username: '',
+      password: '',
       loginPage: true,
       location: 'loading..',
       date: 'loading..',
       items: [{ description: 'Happy Hour 1' }],
     };
+    this.handleLogin = this.handleLogin.bind(this);
+    this.typeUsername = this.typeUsername.bind(this);
+    this.typePassword = this.typePassword.bind(this);
   }
 
   // after the component mounts
@@ -51,19 +56,33 @@ class App extends React.Component {
     // });
   }
 
+  handleLogin(e) {
+    console.log('USERNAME');
+    console.log(this.state.username);
+    console.log('PASSWORD');
+    console.log(this.state.password);
+    e.preventDefault();
+  }
+  typeUsername(event) {
+    this.setState({ username: event.target.value });
+  }
+  typePassword(event) {
+    this.setState({ password: event.target.value });
+  }
+
   render() {
     if (this.state.loginPage) {
       return (
         <div>
           <h2> Happy Hour App</h2>
-          <form>
+          <form onSubmit={this.handleLogin}>
             <label>
               Username:
-              <input type="text" name="username" />
+              <input type="text" name="username" value={this.state.username} onChange={this.typeUsername} />
             </label>
             <label>
               Password:
-              <input type="text" name="password" />
+              <input type="text" name="password" value={this.state.password} onChange={this.typePassword} />
             </label>
             <input type="submit" value="Submit" />
           </form>
