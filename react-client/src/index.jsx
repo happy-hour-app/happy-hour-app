@@ -14,12 +14,16 @@ class App extends React.Component {
       username: '',
       password: '',
       loginPage: true,
+      // ^^^ make true to work on login page ^^^
+      createUserPage: false,
+      // ^^^ make true to work on create user page ^^^
       location: 'loading..',
       date: 'loading..',
       items: [{ description: 'Happy Hour 1' }],
     };
     this.typeUsername = this.typeUsername.bind(this);
     this.typePassword = this.typePassword.bind(this);
+    this.handleCreateUser = this.handleCreateUser.bind(this);
   }
 
   // after the component mounts
@@ -59,13 +63,21 @@ class App extends React.Component {
   typePassword(event) {
     this.setState({ password: event.target.value });
   }
+  // on click for login page redirect to signup page
+  handleCreateUser() {
+    console.log('REDIRECT CREATE USER PAGE');
+    this.setState({ createUserPage: true });
+  }
 
   render() {
+    if (this.state.createUserPage) {
+      return (<div> Create User Page </div>);
+    }
     if (this.state.loginPage) {
       return (
         <div>
           <div>( LOGIN PAGE ALWAYS TRUE IN INDEX.JSX UNTIL SERVER HANDLES ACCOUNTS ) </div>
-          <LoginPage username={this.state.username} password={this.state.password} pwchange={this.typePassword} usrchange={this.typeUsername} />
+          <LoginPage handleCreateUser={this.handleCreateUser} username={this.state.username} password={this.state.password} pwchange={this.typePassword} usrchange={this.typeUsername} />
         </div>
       );
     }
