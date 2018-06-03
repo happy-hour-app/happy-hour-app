@@ -4,6 +4,7 @@ import $ from 'jquery';
 import axios from 'axios';
 import HappyHourList from './components/happyHourList.jsx';
 import HappyHourHeader from './components/header.jsx';
+import LoginPage from './components/loginPage.jsx';
 
 
 class App extends React.Component {
@@ -17,7 +18,6 @@ class App extends React.Component {
       date: 'loading..',
       items: [{ description: 'Happy Hour 1' }],
     };
-    this.handleLogin = this.handleLogin.bind(this);
     this.typeUsername = this.typeUsername.bind(this);
     this.typePassword = this.typePassword.bind(this);
   }
@@ -43,32 +43,19 @@ class App extends React.Component {
       (err) => { console.log(err); },
     );
     // populate happy Hour list with get request.
-    // $.ajax({
-    //     url: '/happyHours',
-    //     success: (data) => {
-    //         this.setState({
-    //             items: data
-    //         })
-    //     },
-    //     error: (err) => {
-    //         console.log('err', err);
-    //     }
+    // axios.get('/happyHours').then((data) => {
+    //   this.setState({
+    //     items: data,
+    //   });
+    // }).catch((err) => {
+    //   console.log('err', err);
     // });
   }
-
-  handleLogin(e) {
-    console.log('USERNAME');
-    console.log(this.state.username);
-    console.log('PASSWORD');
-    console.log(this.state.password);
-    axios.post('/login', { username: this.state.username, password: this.state.password })
-      .then((res) => { console.log(res.data); })
-      .catch(err => console.log(err));
-    e.preventDefault();
-  }
+  // on change event for username input (Login Page)
   typeUsername(event) {
     this.setState({ username: event.target.value });
   }
+  // on change event for password input (Login Page)
   typePassword(event) {
     this.setState({ password: event.target.value });
   }
@@ -77,19 +64,8 @@ class App extends React.Component {
     if (this.state.loginPage) {
       return (
         <div>
-          <h2> Happy Hour App</h2>
-          <form onSubmit={this.handleLogin}>
-            <label>
-              Username:
-              <input type="text" name="username" value={this.state.username} onChange={this.typeUsername} />
-            </label>
-            <label>
-              Password:
-              <input type="text" name="password" value={this.state.password} onChange={this.typePassword} />
-            </label>
-            <input type="submit" value="Login" />
-          </form>
           <div>( LOGIN PAGE ALWAYS TRUE IN INDEX.JSX UNTIL SERVER HANDLES ACCOUNTS ) </div>
+          <LoginPage username={this.state.username} password={this.state.password} pwchange={this.typePassword} usrchange={this.typeUsername} />
         </div>
       );
     }
