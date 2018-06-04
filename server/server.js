@@ -19,7 +19,12 @@ app.get('/', (req, res) => {
 
 app.post('/login', (req, res) => {
   console.log(req.body);
-  res.status(200).send(`200: Recieved request to login with username: ${req.body.username} password:  ${req.body.password}`);
+  res.status(200).send(`200: Recieved request to login with user Email: ${req.body.userEmail} password:  ${req.body.password}`);
+});
+
+app.post('/user', (req, res) => {
+  console.log(req.body);
+  res.status(200).send(`200: Recieved request to create user with user Email: ${req.body.userEmail} password:  ${req.body.password}`);
 });
 
 app.listen(process.env.PORT, () => {

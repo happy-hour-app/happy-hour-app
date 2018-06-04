@@ -12,9 +12,9 @@ class LoginPage extends React.Component {
   }
   // handle on Submit, send post to '/login'
   handleLogin(e) {
-    console.log(`USERNAME: ${this.props.username}`);
+    console.log(`UserEmail: ${this.props.userEmail}`);
     console.log(`PASSWORD: ${this.props.password}`);
-    axios.post('/login', { username: this.props.username, password: this.props.password })
+    axios.post('/login', { userEmail: this.props.userEmail, password: this.props.password })
       .then((res) => { console.log(res.data); })
       .catch(err => console.log(err));
     e.preventDefault();
@@ -26,8 +26,8 @@ class LoginPage extends React.Component {
         <h2> Happy Hour App</h2>
         <form onSubmit={this.handleLogin}>
           <label>
-            Username:
-            <input type="text" name="username" value={this.props.username} onChange={this.props.usrchange} />
+            Email:
+            <input type="text" name="useremail" value={this.props.userEmail} onChange={this.props.usrchange} />
           </label>
           <label>
             Password:

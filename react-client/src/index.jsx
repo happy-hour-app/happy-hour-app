@@ -12,7 +12,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
+      userEmail: '',
       password: '',
       loginPage: true,
       // ^^^ make true to work on login page ^^^
@@ -22,7 +22,7 @@ class App extends React.Component {
       date: 'loading..',
       items: [{ description: 'Happy Hour 1' }],
     };
-    this.typeUsername = this.typeUsername.bind(this);
+    this.typeUserEmail = this.typeUserEmail.bind(this);
     this.typePassword = this.typePassword.bind(this);
     this.handleCreateUserClick = this.handleCreateUserClick.bind(this);
     this.handleLoginClick = this.handleLoginClick.bind(this);
@@ -57,9 +57,9 @@ class App extends React.Component {
     //   console.log('err', err);
     // });
   }
-  // on change event for username input (Login Page)
-  typeUsername(event) {
-    this.setState({ username: event.target.value });
+  // on change event for user email input (Login Page)
+  typeUserEmail(event) {
+    this.setState({ userEmail: event.target.value });
   }
   // on change event for password input (Login Page)
   typePassword(event) {
@@ -88,7 +88,7 @@ class App extends React.Component {
       return (
         <div>
           <div> Create User Page </div>
-          < CreateUserPage handleLoginClick={this.handleLoginClick} username={this.state.username} password={this.state.password} pwchange={this.typePassword} usrchange={this.typeUsername} />
+          < CreateUserPage handleLoginClick={this.handleLoginClick} userEmail={this.state.userEmail} password={this.state.password} pwchange={this.typePassword} usrchange={this.typeUserEmail} />
         </div>
       );
     }
@@ -96,7 +96,7 @@ class App extends React.Component {
       return (
         <div>
           <div>( LOGIN PAGE ALWAYS TRUE IN INDEX.JSX UNTIL SERVER HANDLES ACCOUNTS ) </div>
-          <LoginPage handleCreateUserClick={this.handleCreateUserClick} username={this.state.username} password={this.state.password} pwchange={this.typePassword} usrchange={this.typeUsername} />
+          <LoginPage handleCreateUserClick={this.handleCreateUserClick} userEmail={this.state.userEmail} password={this.state.password} pwchange={this.typePassword} usrchange={this.typeUserEmail} />
         </div>
       );
     }
