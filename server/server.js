@@ -10,6 +10,7 @@ const app = express();
 // handle requests here
 
 // need to use React 
+console.log('test ssh');
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '/../react-client/dist')));
 
