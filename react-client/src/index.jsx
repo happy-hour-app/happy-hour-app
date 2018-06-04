@@ -5,6 +5,7 @@ import axios from 'axios';
 import HappyHourList from './components/happyHourList.jsx';
 import HappyHourHeader from './components/header.jsx';
 import LoginPage from './components/loginPage.jsx';
+import CreateUserPage from './components/createUserPage.jsx';
 
 
 class App extends React.Component {
@@ -23,7 +24,8 @@ class App extends React.Component {
     };
     this.typeUsername = this.typeUsername.bind(this);
     this.typePassword = this.typePassword.bind(this);
-    this.handleCreateUser = this.handleCreateUser.bind(this);
+    this.handleCreateUserClick = this.handleCreateUserClick.bind(this);
+    this.handleLoginClick = this.handleLoginClick.bind(this);
   }
 
   // after the component mounts
@@ -64,20 +66,37 @@ class App extends React.Component {
     this.setState({ password: event.target.value });
   }
   // on click for login page redirect to signup page
-  handleCreateUser() {
+  handleCreateUserClick() {
     console.log('REDIRECT CREATE USER PAGE');
-    this.setState({ createUserPage: true });
+    this.setState({
+      createUserPage: true,
+      loginPage: false,
+    });
+  }
+
+  // on click for create user page redirect to login page
+  handleLoginClick() {
+    console.log('REDIRECT LOGIN PAGE');
+    this.setState({
+      createUserPage: false,
+      loginPage: true,
+    });
   }
 
   render() {
     if (this.state.createUserPage) {
-      return (<div> Create User Page </div>);
+      return (
+        <div>
+          <div> Create User Page </div>
+          < CreateUserPage handleLoginClick={this.handleLoginClick} username={this.state.username} password={this.state.password} pwchange={this.typePassword} usrchange={this.typeUsername} />
+        </div>
+      );
     }
     if (this.state.loginPage) {
       return (
         <div>
           <div>( LOGIN PAGE ALWAYS TRUE IN INDEX.JSX UNTIL SERVER HANDLES ACCOUNTS ) </div>
-          <LoginPage handleCreateUser={this.handleCreateUser} username={this.state.username} password={this.state.password} pwchange={this.typePassword} usrchange={this.typeUsername} />
+          <LoginPage handleCreateUserClick={this.handleCreateUserClick} username={this.state.username} password={this.state.password} pwchange={this.typePassword} usrchange={this.typeUsername} />
         </div>
       );
     }

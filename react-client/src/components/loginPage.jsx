@@ -35,7 +35,7 @@ class LoginPage extends React.Component {
           </label>
           <input type="submit" value="Login" />
         </form>
-        <button onClick={this.props.handleCreateUser}>Sign Up</button>
+        <button onClick={this.props.handleCreateUserClick}>Sign Up</button>
       </div>
     );
   }
