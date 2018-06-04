@@ -12,8 +12,6 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      userEmail: '',
-      password: '',
       loginPage: false,
       // ^^^ make true to work on login page ^^^
       createUserPage: false,
@@ -22,8 +20,6 @@ class App extends React.Component {
       date: 'loading..',
       items: [{ description: 'Happy Hour 1' }],
     };
-    this.typeUserEmail = this.typeUserEmail.bind(this);
-    this.typePassword = this.typePassword.bind(this);
     this.handleCreateUserClick = this.handleCreateUserClick.bind(this);
     this.handleLoginClick = this.handleLoginClick.bind(this);
     this.handleLoginPageClick = this.handleLoginPageClick.bind(this);
@@ -60,14 +56,8 @@ class App extends React.Component {
     //   console.log('err', err);
     // });
   }
-  // on change event for user email input (Login Page)
-  typeUserEmail(event) {
-    this.setState({ userEmail: event.target.value });
-  }
-  // on change event for password input (Login Page)
-  typePassword(event) {
-    this.setState({ password: event.target.value });
-  }
+
+  
   // on click for login page redirect to signup page
   handleCreateUserClick() {
     console.log('REDIRECT CREATE USER PAGE');
@@ -110,14 +100,14 @@ class App extends React.Component {
     if (this.state.createUserPage) {
       return (
         <div>
-          <CreateUserPage handleHomePageClick={this.handleHomePageClick} handleLoginClick={this.handleLoginClick} userEmail={this.state.userEmail} password={this.state.password} pwchange={this.typePassword} usrchange={this.typeUserEmail} />
+          <CreateUserPage handleHomePageClick={this.handleHomePageClick} handleLoginClick={this.handleLoginClick} />
         </div>
       );
     }
     if (this.state.loginPage) {
       return (
         <div>
-          <LoginPage handleHomePageClick={this.handleHomePageClick} handleCreateUserClick={this.handleCreateUserClick} userEmail={this.state.userEmail} password={this.state.password} pwchange={this.typePassword} usrchange={this.typeUserEmail} />
+          <LoginPage handleHomePageClick={this.handleHomePageClick} handleCreateUserClick={this.handleCreateUserClick} />
         </div>
       );
     }

@@ -6,26 +6,30 @@ class CreateUserPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      userEmail: '',
+      password: '',
       firstName: '',
       lastName: '',
       phoneNumber: 0,
       age: 0,
     };
+    this.handleCreateUser = this.handleCreateUser.bind(this);
     this.typeFirstName = this.typeFirstName.bind(this);
     this.typeLastName = this.typeLastName.bind(this);
-    this.handleCreateUser = this.handleCreateUser.bind(this);
     this.typeAge = this.typeAge.bind(this);
     this.typePhoneNumber = this.typePhoneNumber.bind(this);
+    this.typeUserEmail = this.typeUserEmail.bind(this);
+    this.typePassword = this.typePassword.bind(this);
+
     // can update to handle input change in here
   }
   // handle on Submit, send post to '/login'
   handleCreateUser(e) {
-    console.log(`USEREMAIL: ${this.props.userEmail}`);
-    console.log(`PASSWORD: ${this.props.password}`);
-
+    console.log(`USEREMAIL: ${this.state.userEmail}`);
+    console.log(`PASSWORD: ${this.state.password}`);
     const newUser = {
-      userEmail: this.props.userEmail,
-      password: this.props.password,
+      userEmail: this.state.userEmail,
+      password: this.state.password,
       firstName: this.state.firstName,
       lastName: this.state.lastName,
       phoneNumber: this.state.phoneNumber,
@@ -46,15 +50,22 @@ class CreateUserPage extends React.Component {
     this.setState({ lastName: event.target.value });
     setTimeout(() => { console.log(this.state.lastName); }, 100);
   }
-
   typeAge(event) {
     this.setState({ age: event.target.value });
     setTimeout(() => { console.log(this.state.age); }, 100);
   }
-
   typePhoneNumber(event) {
     this.setState({ phoneNumber: event.target.value });
     setTimeout(() => { console.log(this.state.phoneNumber); }, 100);
+  }
+  // on change event for user email input (Login Page)
+  typeUserEmail(event) {
+    this.setState({ userEmail: event.target.value });
+  }
+
+  // on change event for password input (Login Page)
+  typePassword(event) {
+    this.setState({ password: event.target.value });
   }
 
   render() {
@@ -74,12 +85,12 @@ class CreateUserPage extends React.Component {
           <br />
         <label>
           Email:
-          <input type="text" name="useremail" value={this.props.userEmail} onChange={this.props.usrchange} />
+          <input type="text" name="useremail" value={this.state.userEmail} onChange={this.typeUserEmail} />
         </label>
           <br />
         <label>
           Password:
-          <input type="text" name="password" value={this.props.password} onChange={this.props.pwchange} />
+          <input type="text" name="password" value={this.state.password} onChange={this.typePassword} />
         </label>
         <br />
         <label>
