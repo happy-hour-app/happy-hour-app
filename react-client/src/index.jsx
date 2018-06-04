@@ -110,7 +110,6 @@ class App extends React.Component {
     if (this.state.createUserPage) {
       return (
         <div>
-          <div> Create User Page </div>
           <CreateUserPage handleHomePageClick={this.handleHomePageClick} handleLoginClick={this.handleLoginClick} userEmail={this.state.userEmail} password={this.state.password} pwchange={this.typePassword} usrchange={this.typeUserEmail} />
         </div>
       );
