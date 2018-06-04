@@ -63,6 +63,7 @@ class CreateUserPage extends React.Component {
         <input type="submit" value="Create User" />
         </form>
         <button onClick={this.props.handleLoginClick}>Login</button>
+        <button onClick={this.props.handleHomePageClick}>HomePage</button>
       </div>
     );
   }

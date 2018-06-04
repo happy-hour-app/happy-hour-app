@@ -14,7 +14,7 @@ class App extends React.Component {
     this.state = {
       userEmail: '',
       password: '',
-      loginPage: true,
+      loginPage: false,
       // ^^^ make true to work on login page ^^^
       createUserPage: false,
       // ^^^ make true to work on create user page ^^^
@@ -26,6 +26,9 @@ class App extends React.Component {
     this.typePassword = this.typePassword.bind(this);
     this.handleCreateUserClick = this.handleCreateUserClick.bind(this);
     this.handleLoginClick = this.handleLoginClick.bind(this);
+    this.handleLoginPageClick = this.handleLoginPageClick.bind(this);
+    this.handleSignUpPageClick = this.handleSignUpPageClick.bind(this);
+    this.handleHomePageClick = this.handleHomePageClick.bind(this);
   }
 
   // after the component mounts
@@ -83,12 +86,32 @@ class App extends React.Component {
     });
   }
 
+  handleLoginPageClick() {
+    this.setState({
+      loginPage: true,
+    });
+  }
+
+
+  handleSignUpPageClick() {
+    this.setState({
+      createUserPage: true,
+    });
+  }
+
+  handleHomePageClick() {
+    this.setState({
+      createUserPage: false,
+      loginPage: false,
+    });
+  }
+
   render() {
     if (this.state.createUserPage) {
       return (
         <div>
           <div> Create User Page </div>
-          < CreateUserPage handleLoginClick={this.handleLoginClick} userEmail={this.state.userEmail} password={this.state.password} pwchange={this.typePassword} usrchange={this.typeUserEmail} />
+          <CreateUserPage handleHomePageClick={this.handleHomePageClick} handleLoginClick={this.handleLoginClick} userEmail={this.state.userEmail} password={this.state.password} pwchange={this.typePassword} usrchange={this.typeUserEmail} />
         </div>
       );
     }
@@ -96,13 +119,16 @@ class App extends React.Component {
       return (
         <div>
           <div>( LOGIN PAGE ALWAYS TRUE IN INDEX.JSX UNTIL SERVER HANDLES ACCOUNTS ) </div>
-          <LoginPage handleCreateUserClick={this.handleCreateUserClick} userEmail={this.state.userEmail} password={this.state.password} pwchange={this.typePassword} usrchange={this.typeUserEmail} />
+          <LoginPage handleHomePageClick={this.handleHomePageClick} handleCreateUserClick={this.handleCreateUserClick} userEmail={this.state.userEmail} password={this.state.password} pwchange={this.typePassword} usrchange={this.typeUserEmail} />
         </div>
       );
     }
     return (
       <div>
         <HappyHourHeader location={this.state.location} date={this.state.date} />
+        <br />
+        <button onClick={this.handleSignUpPageClick}>Sign Up</button>
+        <button onClick={this.handleLoginPageClick}>Login</button>
         <h1>Happy Hour List</h1>
         <HappyHourList items={this.state.items} />
       </div>);
