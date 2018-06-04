@@ -118,7 +118,6 @@ class App extends React.Component {
     if (this.state.loginPage) {
       return (
         <div>
-          <div>( LOGIN PAGE ALWAYS TRUE IN INDEX.JSX UNTIL SERVER HANDLES ACCOUNTS ) </div>
           <LoginPage handleHomePageClick={this.handleHomePageClick} handleCreateUserClick={this.handleCreateUserClick} userEmail={this.state.userEmail} password={this.state.password} pwchange={this.typePassword} usrchange={this.typeUserEmail} />
         </div>
       );
